@@ -1,8 +1,7 @@
 /**
- * @file C++ grammar for tree-sitter
+ * @file UFCS C grammar for tree-sitter
+ * @author Joshua Dahl <joshuadahl@unr.edu>
  * @author Max Brunsfeld <maxbrunsfeld@gmail.com>
- * @author Amaan Qureshi <amaanq12@gmail.com>
- * @author John Drouhard <john@drouhard.dev>
  * @license MIT
  */
 
@@ -50,7 +49,7 @@ const ASSIGNMENT_OPERATORS = [
 ];
 
 module.exports = grammar(C, {
-  name: 'cpp',
+  name: 'ufcsc',
 
   externals: $ => [
     $.raw_string_delimiter,
@@ -68,7 +67,7 @@ module.exports = grammar(C, {
     [$._block_item, $.statement],
     [$.type_qualifier, $.extension_expression],
 
-    // C++
+    // UFCS C
     [$.template_function, $.template_type],
     [$.template_function, $.template_type, $.expression],
     [$.template_function, $.template_type, $.qualified_identifier],
@@ -239,7 +238,7 @@ module.exports = grammar(C, {
       commaSep1(field('declarator', choice(
         seq(
           // C uses _declaration_declarator here for some nice macro parsing in function declarators,
-          // but this causes a world of pain for C++ so we'll just stick to the normal _declarator here.
+          // but this causes a world of pain for UFCS C so we'll just stick to the normal _declarator here.
           $._declarator,
           optional($.gnu_asm_expression),
         ),
@@ -306,7 +305,7 @@ module.exports = grammar(C, {
       )),
     )),
 
-    // The `auto` storage class is removed in C++0x in order to allow for the `auto` type.
+    // The `auto` storage class is removed in UFCS C0x in order to allow for the `auto` type.
     storage_class_specifier: (_, original) => choice(
       ...original.members.filter((member) => member.value !== 'auto'),
       'thread_local',

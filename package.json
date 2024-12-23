@@ -1,17 +1,17 @@
 {
-  "name": "tree-sitter-cpp",
+  "name": "tree-sitter-ufcsc",
   "version": "0.23.4",
-  "description": "C++ grammar for tree-sitter",
-  "repository": "https://github.com/tree-sitter/tree-sitter-cpp",
+  "description": "UFCS C grammar for tree-sitter",
+  "repository": "https://github.com/tree-sitter/tree-sitter-ufcsc",
   "license": "MIT",
   "author": {
-    "name": "Max Brunsfeld",
-    "email": "maxbrunsfeld@gmail.com"
+    "name": "Joshua Dahl",
+    "email": "joshuadahl@unr.edu"
   },
   "maintainers": [
     {
-      "name": "Amaan Qureshi",
-      "email": "amaanq12@gmail.com"
+      "name": "Joshua Dahl",
+      "email": "joshuadahl@unr.edu"
     }
   ],
   "main": "bindings/node",
@@ -20,7 +20,7 @@
     "incremental",
     "parsing",
     "tree-sitter",
-    "c++"
+    "ufcsc"
   ],
   "files": [
     "grammar.js",

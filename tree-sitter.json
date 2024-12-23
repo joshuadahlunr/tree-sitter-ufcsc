@@ -1,13 +1,13 @@
 {
   "grammars": [
     {
-      "name": "cpp",
-      "camelcase": "CPP",
-      "scope": "source.cpp",
+      "name": "ufcsc",
+      "camelcase": "ufcsc",
+      "scope": "source.ufcsc",
       "path": ".",
       "file-types": [
         "cc",
-        "cpp",
+        "ufcsc",
         "cxx",
         "hpp",
         "hxx",
@@ -19,13 +19,13 @@
       ],
       "injections": "queries/injections.scm",
       "tags": "queries/tags.scm",
-      "injection-regex": "^(cc|cpp)$"
+      "injection-regex": "^(cc|ufcsc)$"
     }
   ],
   "metadata": {
     "version": "0.23.4",
     "license": "MIT",
-    "description": "C++ grammar for tree-sitter",
+    "description": "UFCS C grammar for tree-sitter",
     "authors": [
       {
         "name": "Max Brunsfeld",
@@ -41,7 +41,7 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/tree-sitter/tree-sitter-cpp"
+      "repository": "https://github.com/tree-sitter/tree-sitter-ufcsc"
     }
   },
   "bindings": {

@@ -1,4 +1,4 @@
-module github.com/tree-sitter/tree-sitter-cpp
+module github.com/tree-sitter/tree-sitter-ufcsc
 
 go 1.22
 

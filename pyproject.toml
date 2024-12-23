@@ -3,10 +3,10 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tree-sitter-cpp"
-description = "C++ grammar for tree-sitter"
+name = "tree-sitter-ufcsc"
+description = "UFCS C grammar for tree-sitter"
 version = "0.23.4"
-keywords = ["incremental", "parsing", "tree-sitter", "cpp"]
+keywords = ["incremental", "parsing", "tree-sitter", "ufcsc"]
 classifiers = [
   "Intended Audience :: Developers",
   "License :: OSI Approved :: MIT License",
@@ -15,6 +15,7 @@ classifiers = [
   "Typing :: Typed",
 ]
 authors = [
+  { name = "Joshua Dahl", email = "joshuadahl@unr.edu" },
   { name = "Max Brunsfeld", email = "maxbrunsfeld@gmail.com" },
   { name = "Amaan Qureshi", email = "amaanq12@gmail.com" },
 ]
@@ -23,7 +24,7 @@ license.text = "MIT"
 readme = "README.md"
 
 [project.urls]
-Homepage = "https://github.com/tree-sitter/tree-sitter-cpp"
+Homepage = "https://github.com/tree-sitter/tree-sitter-ufcsc"
 
 [project.optional-dependencies]
 core = ["tree-sitter~=0.22"]
